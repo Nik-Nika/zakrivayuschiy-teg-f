@@ -1,1 +1,1 @@
-https://github.com/Nik-Nika/zakrivayuschiy-teg-f
+https://github.com/Nik-Nika/zakrivayuschiy-teg-f.git
