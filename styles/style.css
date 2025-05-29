@@ -18,8 +18,9 @@
 }
 
 .page {
-  background-image: url(../images/fon.png),
-    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  background-image: url(/images/fon.png),
+    repeating-linear-gradient(
+      180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -31,8 +32,6 @@
   width: 100%;
   max-width: 696px;
   margin: 100px 0;
-  color: black;
-  /* block-size: 100vh; */
   font-family: "PressStart2P-Regular", sens-serif;
   background-color: var(--white);
 }
