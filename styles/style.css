@@ -10,7 +10,366 @@
 
 */
 
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .page {
+  background-image: url(../images/fon.png),
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  background-position: center;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.header {
+  gap: 20px;
+  width: 100%;
+  max-width: 696px;
+  margin: 100px 0;
+  color: black;
+  /* block-size: 100vh; */
+  font-family: "PressStart2P-Regular", sens-serif;
+  background-color: #fff;
+}
+
+.header__text {
+  margin: 0 0 clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem);
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
+}
+
+.header__title {
+  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  box-sizing: border-box;
+  max-width: 696px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.card__img {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.card__title {
+  border-bottom: 2px solid #000;
+  padding: 4px 10px 6px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.card__watermark {
+  position: absolute;
+  z-index: 1;
+  padding: 27px 25px;
+  opacity: 0.5;
+  color: rgba(0, 0, 0, 1);
+  font-family: "PressStart2P-Regular", sens-serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #fff, -1px -1px #fff;
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) {
+  .card__watermark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.card__text {
+  display: grid;
+  gap: 27px;
+  border-top: 2px solid #000;
+  padding: 25px 25px 0;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 25px;
+  text-align: end;
+}
+
+.card__icon {
+  scale: 0.9;
+}
+
+.card__icon-button {
+  height: 38px;
+  margin-right: 4px;
+  border: none;
+  border: 2px solid #fff;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  border-radius: 0%;
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
+  border-radius: 0%;
+}
+
+.card__like-button {
+  position: relative;
+  z-index: 1;
+  min-width: 130px;
+  min-height: 38px;
+  border: 2px solid #000;
+  overflow: hidden;
+  font-family: "PressStart2P-Regular", sens-serif;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 90%;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.card__like-button:hover::before {
+  transform: translateX(0);
+}
+
+.button__text {
+  z-index: 2;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.card__like-button:focus {
+  border-radius: 0%;
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  border-radius: 0%;
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
+.saturate {
+  filter: saturate(400%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(30deg);
+}
+
+.invert {
+  filter: invert(0.9);
+}
+
+.blur {
+  filter: blur(0.7rem);
+}
+
+.sepia {
+  filter: sepia(90%);
+}
+
+.last {
+  filter: hue-rotate(100deg) blur(0.09rem) saturate(190%) invert(0.3);
+}
+
+.footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin: 50px 0 103px;
+  border: 2px solid #000;
+  padding: 18.5px 20px;
+  overflow: hidden;
+  font-family: "PressStart2P-Regular", sens-serif;
+  font-size: 14px;
+  line-height: 90%;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.footer:hover::before {
+  transform: translateX(0);
+}
+
+.footer:focus {
+  border-radius: 0%;
+  outline: none;
+}
+
+.footer:focus-visible {
+  border-radius: 0%;
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+.button-dialog {
+  width: 353px;
+  height: 191px;
+  padding: 0;
+  font-family: "PressStart2P-Regular", sens-serif;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.btn-dialog {
+  display: flex;
+  width: 257px;
+  height: 63px;
+}
+
+.dialog__button {
+  position: relative;
+  bottom: -20px;
+  left: 42px;
+  box-sizing: border-box;
+  margin: 30px 0;
+  border: 2px solid #000;
+  padding: 12.5px 114.5px;
+  overflow: hidden;
+  background-color: transparent;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dialog__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.dialog__button:hover::before {
+  transform: translateX(0);
+}
+
+.dialog__button:focus {
+  border-radius: 0%;
+  outline: none;
+}
+
+.dialog__button:focus-visible {
+  border-radius: 0%;
+  box-shadow: 2px 2px 0 0 #000;
+}
+
+dialog::backdrop {
+  background-color: rgb(0, 0, 0, 75%);
+}
+
+.dialog_text {
+  position: absolute;
+  top: 30px;
+  right: 42px;
+  width: 198px;
+  font-family: "PressStart2P-Regular", sens-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.save {
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  color: #fff;
+  background-color: #000;
+  mix-blend-mode: difference;
+}
+
+.save__dialog {
+  position: absolute;
+  top: 42px;
+  left: 42px;
+  transform: scale(1.4);
+}
+
+@media (max-width: 376px) {
+  .card__watermark {
+    padding: 25px 13px;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin: 52px 0 100px;
+  }
+
+  .button-dialog {
+    width: 341px;
+  }
+
+  .save {
+    margin-bottom: 8px;
+  }
 }
