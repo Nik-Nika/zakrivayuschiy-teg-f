@@ -19,7 +19,7 @@
 
 .page {
   background-color: var(--white);
-  background-image: url('../images/image.png'),
+  background-image:
     repeating-linear-gradient(
       180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
