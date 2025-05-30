@@ -62,11 +62,16 @@
   transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .core,
-.like-icon.is-liked .main-body,
+
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color, red);
+  animation: fill 0.1s linear;
+}
+
+.like-icon.is-liked .heart {
+  fill: var(--animation-fill-color, red);
   animation: scale 0.3s ease-in 0.1s;
+  transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {

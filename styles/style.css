@@ -19,7 +19,7 @@
 
 .page {
   background-color: var(--white);
-  background-image:
+  background-image: var(--fon),
     repeating-linear-gradient(
       180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
@@ -33,7 +33,7 @@
   width: 100%;
   max-width: 696px;
   margin: 100px 0;
-  font-family: "PressStart2P-Regular", sens-serif;
+  font-family: var(--PressStart2P), fantasy;
   background-color: var(--white);
 }
 
@@ -43,7 +43,7 @@
 }
 
 .header__title {
-  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
+  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 0;
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
 }
 
@@ -80,7 +80,7 @@
   padding: 27px 25px;
   opacity: 0.5;
   color: rgba(0, 0, 0, 1);
-  font-family: "PressStart2P-Regular", sens-serif;
+  font-family: var(--PressStart2P), fantasy;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -145,13 +145,16 @@
 }
 
 .card__like-button {
-  position: relative;
-  z-index: 1;
   min-width: 130px;
   min-height: 38px;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
   border: 2px solid #000;
   overflow: hidden;
-  font-family: "PressStart2P-Regular", sens-serif;
+  font-family: var(--PressStart2P), fantasy;
   font-size: 14px;
   font-style: normal;
   line-height: 90%;
@@ -160,7 +163,7 @@
   cursor: pointer;
 }
 
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -169,28 +172,28 @@
   width: 100%;
   height: 100%;
   background-color: #000;
-  transition: translateX 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   transform: translateX(0);
+}
+
+.button:focus {
+  border-radius: 0%;
+  outline: none;
+}
+
+.button:focus-visible {
+  border-radius: 0%;
+  box-shadow: 2px 2px 0 0 #000;
 }
 
 .button__text {
   z-index: 2;
   color: var(--white);
   mix-blend-mode: difference;
-}
-
-.card__like-button:focus {
-  border-radius: 0%;
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  border-radius: 0%;
-  box-shadow: 2px 2px 0 0 #000;
 }
 
 .grayscale {
@@ -221,104 +224,38 @@
   filter: hue-rotate(100deg) blur(0.09rem) saturate(190%) invert(0.3);
 }
 
-.footer {
-  position: relative;
-  z-index: 1;
+.footer-btn {
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin: 50px 0 103px;
-  border: 2px solid #000;
   padding: 18.5px 20px;
-  overflow: hidden;
-  font-family: "PressStart2P-Regular", sens-serif;
-  font-size: 14px;
-  line-height: 90%;
-  background-color: var(--white);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  transition: translateX 0.5s ease-in-out;
-  transform: translateX(-100%);
-}
-
-.footer:hover::before {
-  transform: translateX(0);
-}
-
-.footer:focus {
-  border-radius: 0%;
-  outline: none;
-}
-
-.footer:focus-visible {
-  border-radius: 0%;
-  box-shadow: 2px 2px 0 0 #000;
+.footer {
+  display: flex;
+  justify-content: center;
 }
 
 .button-dialog {
-  width: 353px;
-  height: 191px;
-  padding: 0;
-  font-family: "PressStart2P-Regular", sens-serif;
+  padding: 30px;
+  font-family: var(--PressStart2P), fantasy;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 150%;  
+  text-align: center;
 }
 
-.btn-dialog {
+.dialog { 
   display: flex;
-  width: 257px;
-  height: 63px;
+  gap: 12px;
+  padding-bottom: 30px;
 }
 
 .dialog__button {
-  position: relative;
-  bottom: -20px;
-  left: 42px;
-  box-sizing: border-box;
-  margin: 30px 0;
-  border: 2px solid #000;
-  padding: 12.5px 114.5px;
-  overflow: hidden;
-  background-color: transparent;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.dialog__button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  transition: translateX 0.5s ease-in-out;
-  transform: translateX(-100%);
-}
-
-.dialog__button:hover::before {
-  transform: translateX(0);
-}
-
-.dialog__button:focus {
-  border-radius: 0%;
-  outline: none;
-}
-
-.dialog__button:focus-visible {
-  border-radius: 0%;
-  box-shadow: 2px 2px 0 0 #000;
+  z-index: 2;
+  min-height: 38px;
+  min-width: 293px;
+  padding: 0;
 }
 
 dialog::backdrop {
@@ -326,11 +263,9 @@ dialog::backdrop {
 }
 
 .dialog_text {
-  position: absolute;
-  top: 30px;
-  right: 42px;
+  text-align: left;
   width: 198px;
-  font-family: "PressStart2P-Regular", sens-serif;
+  font-family: var(--PressStart2P), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -338,20 +273,24 @@ dialog::backdrop {
 }
 
 .save {
-  z-index: 2;
-  width: 28px;
-  height: 28px;
   margin-right: 8px;
   color: var(--white);
   background-color: #000;
   mix-blend-mode: difference;
+  width: 21px;
+  height: 21px;
 }
 
 .save__dialog {
-  position: absolute;
-  top: 42px;
-  left: 42px;
-  transform: scale(1.4);
+  margin-right: 8px;
+  color: var(--white);
+  background-color: #000;
+  mix-blend-mode: difference;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-self: center;
+  padding: 4px;
 }
 
 @media (max-width: 376px) {
@@ -359,7 +298,8 @@ dialog::backdrop {
     padding: 25px 13px;
   }
 
-  .footer {
+  .footer-btn {
+    display: flex;
     flex-direction: column;
     margin: 52px 0 100px;
   }
@@ -370,5 +310,13 @@ dialog::backdrop {
 
   .save {
     margin-bottom: 8px;
+  }
+
+  .button-dialog {
+    padding: 30px 42px;
+  }
+
+  .dialog__button {
+    min-width: 257px;
   }
 }

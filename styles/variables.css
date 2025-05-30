@@ -2,10 +2,11 @@
 
 :root {
   --Inter: "Inter-Varible";
-  --PressStart2P: "PressStart2P-Regular";
+  --PressStart2P: "PressStart2P";
   --font-weight_h: 700;
   --font-weight_p: 400;
   --white: #fff;
   --contour-color: #000;
   --animation-fill-color: red;
+  --fon: url(../images/image.png)
 }
