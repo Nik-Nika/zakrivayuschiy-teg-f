@@ -20,8 +20,7 @@
 .page {
   background-color: var(--white);
   background-image: var(--fon),
-    repeating-linear-gradient(
-      180deg, #e7e7e7 0%, #1a1a1a 100%);
+    repeating-linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -241,11 +240,11 @@
   padding: 30px;
   font-family: var(--PressStart2P), fantasy;
   font-size: 14px;
-  line-height: 150%;  
+  line-height: 150%;
   text-align: center;
 }
 
-.dialog { 
+.dialog {
   display: flex;
   gap: 12px;
   padding-bottom: 30px;
@@ -253,8 +252,8 @@
 
 .dialog__button {
   z-index: 2;
-  min-height: 38px;
   min-width: 293px;
+  min-height: 38px;
   padding: 0;
 }
 
@@ -263,34 +262,34 @@ dialog::backdrop {
 }
 
 .dialog_text {
-  text-align: left;
   width: 198px;
   font-family: var(--PressStart2P), fantasy;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .save {
+  width: 21px;
+  height: 21px;
   margin-right: 8px;
   color: var(--white);
   background-color: #000;
   mix-blend-mode: difference;
-  width: 21px;
-  height: 21px;
 }
 
 .save__dialog {
+  display: flex;
+  align-self: center;
+  width: 39px;
+  height: 39px;
   margin-right: 8px;
+  padding: 4px;
   color: var(--white);
   background-color: #000;
   mix-blend-mode: difference;
-  width: 39px;
-  height: 39px;
-  display: flex;
-  align-self: center;
-  padding: 4px;
 }
 
 @media (max-width: 376px) {

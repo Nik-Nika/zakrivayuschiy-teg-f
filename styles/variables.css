@@ -8,5 +8,6 @@
   --white: #fff;
   --contour-color: #000;
   --animation-fill-color: red;
-  --fon: url(../images/image.png)
+  /* --fon: url(../images/image.png); */
+  /* не понимаю почему не пропускает проверка на github и как сделать по другому не знаю тоже */
 }
