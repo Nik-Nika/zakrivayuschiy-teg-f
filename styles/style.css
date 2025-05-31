@@ -19,8 +19,10 @@
 
 .page {
   background-color: var(--white);
-  background-image: var(--fon),
-    repeating-linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  background-image:
+    repeating-linear-gradient(90deg, #e7e7e7 0px 3px, transparent 3px 6px),
+    repeating-linear-gradient(0deg, #e7e7e7 0px 3px, transparent 3px 6px),
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-attachment: fixed;
   min-inline-size: 320px;
