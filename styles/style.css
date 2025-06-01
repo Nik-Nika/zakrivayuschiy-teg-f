@@ -19,8 +19,11 @@
 
 .page {
   background-color: var(--white);
-  background-image:
-    repeating-linear-gradient(90deg, #e7e7e7 0px 3px, transparent 3px 6px),
+  background-image: repeating-linear-gradient(
+      90deg,
+      #e7e7e7 0px 3px,
+      transparent 3px 6px
+    ),
     repeating-linear-gradient(0deg, #e7e7e7 0px 3px, transparent 3px 6px),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
@@ -39,14 +42,15 @@
   background-color: var(--white);
 }
 
+.header__title {
+  margin: 128px 0 0;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+}
+
 .header__text {
   margin: 0 0 clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem);
   font-size: clamp(1rem, 0.343rem + 2.804vw, 1.563rem);
-}
-
-.header__title {
-  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 0;
-  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  text-transform: uppercase;
 }
 
 .main {
@@ -74,6 +78,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+  font-variation-settings: "wght" var(--font-weight_h);
 }
 
 .card__watermark {
@@ -113,6 +118,7 @@
   padding: 25px 25px 0;
   font-size: 18px;
   line-height: 21px;
+  font-variation-settings: "wght" var(--font-weight_p);
 }
 
 .card__button {
@@ -292,8 +298,12 @@ dialog::backdrop {
 }
 
 @media (max-width: 376px) {
+  .header__title {
+    margin: 120px 0 0;
+  }
+
   .card__watermark {
-    padding: 25px 13px;
+    padding: 25px 11px;
   }
 
   .footer-btn {
@@ -308,6 +318,8 @@ dialog::backdrop {
   }
 
   .save {
+    width: 28px;
+    height: 28px;
     margin-bottom: 8px;
   }
 
