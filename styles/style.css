@@ -21,10 +21,10 @@
   background-color: var(--white);
   background-image: repeating-linear-gradient(
       90deg,
-      #e7e7e7 0px 3px,
-      transparent 3px 6px
+      #d3d3d3 0px 2px,
+      transparent 2px 4px
     ),
-    repeating-linear-gradient(0deg, #e7e7e7 0px 3px, transparent 3px 6px),
+    repeating-linear-gradient(0deg, #d3d3d3 0px 2px, transparent 2px 4px),
     linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
   background-position: center;
   background-attachment: fixed;
@@ -48,8 +48,8 @@
 }
 
 .header__text {
-  margin: 0 0 clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem);
-  font-size: clamp(1rem, 0.343rem + 2.804vw, 1.563rem);
+  margin: 0 0 128px;
+  font-size: clamp(0.875rem, 0.226rem + 2.769vw, 1.438rem);
   text-transform: uppercase;
 }
 
@@ -74,7 +74,7 @@
 
 .card__title {
   border-bottom: 2px solid #000;
-  padding: 4px 10px 6px;
+  padding: 4px 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -300,6 +300,10 @@ dialog::backdrop {
 @media (max-width: 376px) {
   .header__title {
     margin: 120px 0 0;
+  }
+
+  .header__text {
+    margin: 0 0 120px;
   }
 
   .card__watermark {

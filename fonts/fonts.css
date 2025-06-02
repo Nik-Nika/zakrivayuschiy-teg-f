@@ -11,8 +11,8 @@
   src: url("Inter-Variable.woff2") format("woff2 supports variations"),
     url("Inter-Variable.woff2") format("woff2-variations");
   font-weight: 400 785;
-  font-variation-settings: "wght" var(--font-weight_p);
   font-display: swap;
+  font-stretch: 10% 110%;
 }
 
 @supports (font-variation-settings: normal) {
